@@ -1,0 +1,14 @@
+{%extends 'app/base.html'%}
+
+{% block content %}
+{{block.super}}
+<section class="form">
+    <h1>Edit Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ user_form }}
+        {{ profile_form }}
+        <input type="submit" value="Edit Profile" class="btn btn-primary">
+    </form>
+</section>
+{% endblock %}

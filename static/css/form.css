@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+:root {
+    --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+    --color-white: hsl(252, 30%, var(--white-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary: hsl(var(--primary-color-hue), 100%, 90%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --input-border-radius: 0.5rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --edit-btn-padding: 0.4rem 1rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -4rem;
+
+    --transition: all 300ms ease;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    font-size: 0.9rem;
+    /* display: grid;
+    place-items: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    color: var(--color-black);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+a, a:active, a:visited {
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    /* background: var(--color-black);
+    color: var(--color-white); */
+}
+
+.btn.btn-primary {
+    background: var(--color-secondary);
+    color: var(--color-black);
+}
+
+.btn img {
+    width: 1.2rem;
+}
+
+.btn:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.sign-in {
+    background: var(--color-white);
+    width: 50rem;
+    /* width: 60rem; */
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* align-items: center; */
+    /* place-items: center; */
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.sign-in__details {
+    padding: 2rem 2rem;
+}
+
+.sign-in__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+    border: 1px solid var(--color-light);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+}
+
+input::placeholder {
+    color: var(--color-dark);
+}
+
+label {
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.sign-in__extras {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in__extras div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+button:last-child {
+    margin-top: -0.5rem;
+}
+
+.next__page {
+    margin-top: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.sign-in__logo {
+    display: grid;
+    place-content: center;
+    background: var(--color-dark);
+    height: 100%;
+}
+
+/* .sign-in__logo div {
+    width: 22rem;
+    aspect-ratio: 1/1;
+} */
+
+
+
+/* =================== */
+@media screen and (max-width: 600px) {
+    body {
+        display: block;
+        background: var(--color-white);
+    }
+
+    /* h1 {
+        font-size: 2rem;
+    } */
+
+    .sign-in {
+        display: grid;
+        width: 100vw;
+        overflow: visible;
+    }
+
+    .sign-in__details {
+        grid-row: 2/3;
+        padding: 2rem 1.5rem;
+    }
+
+    /* .sign-in__logo {
+        display: none;
+    } */
+
+    .sign-in__form {
+        margin-top: 1.5rem;
+        gap: 1rem;
+        width: 90vw;
+    }
+
+    /* .sign-in__extras {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    } */
+
+    /* .sign-in__logo {
+        padding: 1.5rem 0;
+    } */
+
+    .sign-in__logo div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1020) {
+}

@@ -1,0 +1,167 @@
+{%extends 'app/base.html'%}
+
+{% block content %}
+{{block.super}}
+<main>
+    <div class="container">
+        <!--  -->
+        <div class="left">
+            <a href="" class="profile">
+                <div class="profile-photo">
+                    <div class="profile-picture-name">Js</div>
+                </div>
+                <div class="handle">
+                    <h4>James Dust</h4>
+                    <p>@James_Dust</p>
+                </div>
+            </a>
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <a class="menu-item active">
+                    <span><i class="uil uil-home"></i></span><h3>Home</h3>
+                </a>
+                <a class="menu-item" id="notifications">
+                    <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span><h3>Notifications</h3>
+                    <!-- notification popup -->
+                    <div class="notifications-popup">
+                        <div>
+                            <div class="profile-photo">
+                                <div class="profile-picture-name">Js</div>
+                            </div>
+                            <div class="notification-body">
+                                <b>James Dust</b> accepted your friend request
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="profile-photo">
+                                <div class="profile-picture-name">Js</div>
+                            </div>
+                            <div class="notification-body">
+                                <b>James Dust</b> accepted your friend request
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="profile-photo">
+                                <div class="profile-picture-name">Js</div>
+                            </div>
+                            <div class="notification-body">
+                                <b>James Dust</b> accepted your friend request
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="menu-item" id="messages-notifications">
+                    <span><i class="uil uil-envelope"><small class="notification-count">6</small></i></span><h3>messages</h3>
+                </a>
+                <a class="menu-item">
+                    <span><i class="uil uil-setting"></i></span><h3>settings</h3>
+                </a>
+            </div>
+
+            <label for="create-post" class="btn btn-primary">Create Post</label>
+        </div>
+        <!--  -->
+        
+        <!--  -->
+        <div class="middle">
+            <div class="feeds">
+                <div class="feed">
+                    <div class="head">
+                        <div class="user">
+                            <div class="profile-photo">
+                                <div>Js</div>
+                            </div>
+                            <div>
+                                <h3>{{post.author}}</h3>
+                                <small>Dubai, {{ post.whenpublished }}</small>
+                            </div>
+                        </div>
+                        <span class="edit">
+                            <i class="uil uil-ellipsis-h"></i>
+                        </span>
+                    </div>
+
+                    <div class="photo">
+                        <p>
+                            {{post.body}}
+                        </p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <div class="interaction-buttons">
+                            <span><i class="uil uil-heart"></i></span>
+                            <span><i class="uil uil-comment-dots"></i></span>
+                            <span><i class="uil uil-share-alt"></i></span>
+                        </div>
+                        <div class="bookmark">
+                            <span><i class="uil uil-bookmark-full"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="comments text-muted">
+                        view all 277 comments
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <div class="right">
+            <div class="messages">
+                <div class="heading">
+                    <h4>Messages</h4><i class="uil uil-edit"></i>
+                </div>
+
+                <!-- SEARCH BAR -->
+                <div class="search-bar">
+                    <i class="uil uil-search"></i>
+                    <input type="search" name="" id="message-search" placeholder="Search messages">
+                </div>
+
+                <!-- MESSAGE CATEGORY -->
+                <div class="category">
+                    <h6 class="active">Primary</h6>
+                    <h6>General</h6>
+                    <h6 class="message-requests">Requests(2)</h6>
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="message">
+                    <div class="profile-photo">Js</div>
+                    <div class="message-body">
+                        <h5>Dust Jim</h5>
+                        <p class="text-muted">Just woke up bruh..</p>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">Js</div>
+                    <div class="message-body">
+                        <h5>Dust Jim</h5>
+                        <p class="text-muted">Just woke up bruh..</p>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">Js</div>
+                    <div class="message-body">
+                        <h5>Dust Jim</h5>
+                        <p class="text-muted">Just woke up bruh..</p>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">Js</div>
+                    <div class="message-body">
+                        <h5>Dust Jim</h5>
+                        <p class="text-muted">Just woke up bruh..</p>
+                    </div>
+                </div>
+                <!-- MESSAGE -->
+            </div>
+        </div>
+        <!--  -->
+    </div>
+</main>
+{% endblock %}

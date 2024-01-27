@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+    <section class="sign-in">
+        <article class="sign-in__details">
+            <h1>Sign In</h1>
+            <p>Log into your account using your credentials</p>
+            <form method="post" class="sign-in__form">
+                {% csrf_token %}
+                {{ form }}
+                <div class="sign-in__extras">
+                    <div>
+                        <label for="remember">Remember Me</label>
+                        <input type="checkbox" id="rememberMe">
+                    </div>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button class="btn btn-primary">Sign In</button>
+                <button class="btn">
+                    <img src="{% static 'images/googlelogo.png' %}" alt="">
+                    <p>Sign in with Google</p>
+                </button>
+            </form>
+            <small class="next__page">Don't have an account? <a href="{% url 'register' %}">Sign Up</a></small>
+        </article>
+        <!-- <article class="sign-in__logo">
+            <div>
+                <img src="{% static 'images/profile.jpg' %}" alt="">
+            </div>
+        </article> -->
+    </section>
+</body>
+</html>
